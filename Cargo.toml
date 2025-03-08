@@ -1,0 +1,10 @@
+[package]
+name = "neetcodeio"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+resolver = "2"
+members = ["03/binary-search/problem-00704-binary-search"]
+
+[dependencies]
