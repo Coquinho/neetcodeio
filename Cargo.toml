@@ -1,3 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["03/binary-search/problem-00704-binary-search"]
+members = [
+  "03/binary-search/problem-00074-search-a-2d-matrix",
+  "03/binary-search/problem-00704-binary-search"
+]

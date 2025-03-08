@@ -1,0 +1,7 @@
+[package]
+name = "problem-00074-search-a-2d-matrix"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+problem_00704_binary_search = { path = "../problem-00704-binary-search" }
