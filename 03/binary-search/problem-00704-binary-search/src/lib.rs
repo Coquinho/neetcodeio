@@ -1,8 +1,28 @@
 use std::cmp::Ordering::{Equal, Greater, Less};
 
+pub fn _search(nums: &[i32], start: usize, end: usize, target: i32) -> i32 {
+    let len = end - start;
+    if len < 1 {
+        return -1;
+    }
 
-fn main() {
-    println!("Hello, world!");
+    let midle = len/2 + start;
+    let value = nums[midle];
+    if len == 1 {
+        return if value == target { 0 } else { -1 };
+    }
+    println!("nums {:?}", nums);
+    println!("midle: {}, value: {}", midle, value);
+
+    match value.cmp(&target) {
+        Equal => return midle as i32,
+        Greater => return _search(
+            nums, start, midle, target
+        ),
+        Less => return _search(
+            nums, midle, end, target
+        ),
+    }
 }
 
 struct Solution;
@@ -13,32 +33,7 @@ impl Solution {
             return -1;
         }
 
-        Solution::_search(&nums, 0, len, target)
-    }
-
-    fn _search(nums: &[i32], start: usize, end: usize, target: i32) -> i32 {
-        let len = end - start;
-        if len < 1 {
-            return -1;
-        }
-
-        let midle = len/2 + start;
-        let value = nums[midle];
-        if len == 1 {
-            return if value == target { 0 } else { -1 };
-        }
-        println!("nums {:?}", nums);
-        println!("midle: {}, value: {}", midle, value);
-
-        match value.cmp(&target) {
-            Equal => return midle as i32,
-            Greater => return Solution::_search(
-                nums, start, midle, target
-            ),
-            Less => return Solution::_search(
-                nums, midle, end, target
-            ),
-        }
+        _search(&nums, 0, len, target)
     }
 }
 

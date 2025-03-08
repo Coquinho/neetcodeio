@@ -1,5 +1,5 @@
 [package]
-name = "problem-00704-binary-search"
+name = "problem_00704_binary_search"
 version = "0.1.0"
 edition = "2024"
 
