@@ -10,5 +10,9 @@ dependencies = [
 ]
 
 [[package]]
+name = "problem-00875-koko-eating-bananas"
+version = "0.1.0"
+
+[[package]]
 name = "problem_00704_binary_search"
 version = "0.1.0"
