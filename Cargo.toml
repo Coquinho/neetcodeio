@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
 members = [
-  "03/binary-search/problem-00074-search-a-2d-matrix",
+  "03/binary-search/problem-00074-search-a-2d-matrix", "03/binary-search/problem-00153-find-minimum-in-rotated-sorted-array",
   "03/binary-search/problem-00704-binary-search"
 , "03/binary-search/problem-00875-koko-eating-bananas"]

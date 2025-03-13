@@ -10,6 +10,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "problem-00153-find-minimum-in-rotated-sorted-array"
+version = "0.1.0"
+
+[[package]]
 name = "problem-00875-koko-eating-bananas"
 version = "0.1.0"
 
