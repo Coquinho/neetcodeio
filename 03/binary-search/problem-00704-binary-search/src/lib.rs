@@ -6,7 +6,7 @@ pub fn _search(nums: &[i32], start: usize, end: usize, target: i32) -> i32 {
         return -1;
     }
 
-    let midle = len/2 + start;
+    let midle = len / 2 + start;
     let value = nums[midle];
     if len == 1 {
         return if value == target { 0 } else { -1 };
@@ -16,18 +16,14 @@ pub fn _search(nums: &[i32], start: usize, end: usize, target: i32) -> i32 {
 
     match value.cmp(&target) {
         Equal => return midle as i32,
-        Greater => return _search(
-            nums, start, midle, target
-        ),
-        Less => return _search(
-            nums, midle, end, target
-        ),
+        Greater => return _search(nums, start, midle, target),
+        Less => return _search(nums, midle, end, target),
     }
 }
 
 struct Solution;
 impl Solution {
-     pub fn search(nums: Vec<i32>, target: i32) -> i32 {
+    pub fn search(nums: Vec<i32>, target: i32) -> i32 {
         let len = nums.len();
         if len <= 0 {
             return -1;
